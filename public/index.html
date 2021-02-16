@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8">
+        <title>Cocktail</title>
+        <!--ブラウザ間の差を吸収する-->
+        <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+        <!--Firebaseを利用する-->
+        <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-firestore.js"></script>
+        <!--エラー時に警告を表示し処理を止める-->>
+        <script type='text/javascript' src='_assert.js'></script>
+    </head>
+    <body>
+        <h2>基本情報</h2>
+        開発コード：cacktail<br>
+        <br>
+        <h2>骨子機能</h2>
+        <button type="button" onclick="startVideo();">ビデオ開始</button>
+        <button type="button" onclick="stopVideo();">ビデオ停止</button>
+        <button type="button" onclick="connect();">接続する</button>
+        <button type="button" onclick="hangUp();">切断する</button>
+        <br>
+        <a id="room_link" href="" target="_blank">ルームのURLを取得する</a>
+        <br>
+        <a id="mail_link" href="" target="_blank">URLをメールで送る</a>
+        <br>
+        <div>
+            <video id="local_video" autoplay style="width: 160px; height: 120px; border: 1px solid black;"></video>
+        </div>
+        <!--後から通信画面を増やす-->>
+        <div id="container"></div>
+        <script type='text/javascript' src='webrtc.js'></script>
+    </body>
+</html>
