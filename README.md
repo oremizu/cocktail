@@ -1,2 +1,0 @@
-# cocktail
-firestoreとwebRTCによってビデオチャットを作成する
